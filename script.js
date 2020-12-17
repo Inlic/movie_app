@@ -25,21 +25,23 @@ function showMovies(movies) {
   movie.innerHTML = `
   <div class="movie">
       <img
-        src="https://images.unsplash.com/photo-1518173835740-f5d14111d76a?ixlib-rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1154&q=80"
-        alt="">
+        src="${IMG_PATH + poster_path}"
+        alt="${title}">
       <div class="movie-info">
-        <h3>Movie Title</h3>
-        <span class="green">9.8</span>
+        <h3>${title}</h3>
+        <span>${vote_average}</span>
       </div>
       <div class="overview">
         <h3>Overview</h3>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, aperiam perspiciatis! Nobis, nemo nulla tenetur
-        aperiam enim maiores voluptas accusantium.
+        ${overview}
       </div>
     </div>  
   `
 
 }
+
+
+
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
